@@ -10,6 +10,12 @@ export default class VncCard extends Component {
     connection = connection => {
         this.setState({ connection: connection });
     };
+    
+    componentDidMount() {
+        this.setState({ fullscreen: true });
+        this.setState({ unlocked: true });
+        this.screen.lock(true);
+    }
 
     handleFullscreen = () => {
         this.props.onVNCFullscreenChange(!this.state.fullscreen);
