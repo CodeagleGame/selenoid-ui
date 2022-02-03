@@ -11,7 +11,11 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Selenoid UI</title>
   </head>
-  <body>
+  <script language="JavaScript">
+    document.oncontextmenu =new Function("return false;")
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+  <body onselectstart="return false">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
